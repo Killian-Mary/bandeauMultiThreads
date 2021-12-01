@@ -39,7 +39,7 @@ public class Scenario extends Thread{
      * @param b le bandeau ou s'afficher.
      */
     public void playOn(Bandeau b) {
-    	Thread t = new Thread () {
+    	Thread thread = new Thread () {
     		public void run() {
     			synchronized(b) {
     				for (ScenarioElement element : myElements) {
@@ -50,6 +50,6 @@ public class Scenario extends Thread{
     			}
     		}
     	};
-    	t.start();
+    	thread.start();
     }
 }
